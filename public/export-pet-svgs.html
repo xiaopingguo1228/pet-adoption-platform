@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>导出宠物SVG</title>
+    <style>
+        body {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f7;
+        }
+        h1, h2 {
+            color: #333;
+            text-align: center;
+        }
+        .pet-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            margin: 30px 0;
+        }
+        .pet-card {
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            width: 220px;
+            text-align: center;
+        }
+        .pet-name {
+            font-weight: bold;
+            margin: 15px 0 10px;
+            font-size: 18px;
+        }
+        .pet-description {
+            color: #666;
+            font-size: 14px;
+            margin-bottom: 15px;
+        }
+        .download-btn {
+            display: block;
+            margin-top: 15px;
+            padding: 10px 15px;
+            background-color: #6a1b9a;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            text-align: center;
+        }
+        .download-all {
+            display: block;
+            margin: 30px auto;
+            padding: 12px 24px;
+            background-color: #4a148c;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .color-options {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 5px;
+            margin: 10px 0;
+        }
+        .color-option {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            cursor: pointer;
+            border: 2px solid transparent;
+        }
+        .color-option.selected {
+            border-color: #333;
+        }
+    </style>
+</head>
+<body>
+    <h1>跨次元电子宠物伙伴 - 宠物SVG导出</h1>
+    <p style="text-align: center;">点击下方按钮下载各种宠物的SVG源文件</p>
+    
+    <div class="pet-container">
+        <!-- 猫咪 -->
+        <div class="pet-card">
+            <svg width="150" height="150" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" id="cat-svg">
+                <title>猫咪</title>
+                <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                    <circle id="cat-body" fill="#FFA500" cx="100" cy="110" r="60"></circle>
+                    <circle id="cat-head" fill="#FFA500" cx="100" cy="80" r="40"></circle>
+                    <path id="cat-left-ear" d="M70,60 L60,30 L85,50 Z" fill="#FFA500"></path>
+                    <path id="cat-right-ear" d="M130,60 L140,30 L115,50 Z" fill="#FFA500"></path>
+                    <ellipse fill="#FFFFFF" cx="85" cy="75" rx="10" ry="12"></ellipse>
+                    <ellipse fill="#FFFFFF" cx="115" cy="75" rx="10" ry="12"></ellipse>
+                    <ellipse fill="#000000" cx="85" cy="75" rx="5" ry="7"></ellipse>
+                    <ellipse fill="#000000" cx="115" cy="75" rx="5" ry="7"></ellipse>
+                    <path d="M100,85 L95,95 L105,95 Z" fill="#FF6B6B"></path>
+                    <path d="M95,95 Q100,100 105,95" stroke="#000000" stroke-width="1.5" fill="none"></path>
+                    <line x1="95" y1="95" x2="70" y2="90" stroke="#000000" stroke-width="1"></line>
+                    <line x1="95" y1="95" x2="70" y2="95" stroke="#000000" stroke-width="1"></line>
+                    <line x1="95" y1="95" x2="70" y2="100" stroke="#000000" stroke-width="1"></line>
+                    <line x1="105" y1="95" x2="130" y2="90" stroke="#000000" stroke-width="1"></line>
+                    <line x1="105" y1="95" x2="130" y2="95" stroke="#000000" stroke-width="1"></line>
+                    <line x1="105" y1="95" x2="130" y2="100" stroke="#000000" stroke-width="1"></line>
+                    <path id="cat-tail" d="M160,110 C180,90 170,70 150,80 C140,85 130,100 140,110" stroke="#FFA500" stroke-width="10" fill="none"></path>
+                </g>
+            </svg>
+            <div class="pet-name">猫咪</div>
+            <div class="pet-description">优雅、独立的猫咪伙伴，喜欢安静的环境和偶尔的抚摸。</div>
+            <div class="color-options" data-pet="cat">
+                <div class="color-option selected" style="background-color: #FFA500;" data-color="#FFA500" title="橙色"></div>
+                <div class="color-option" style="background-color: #333333;" data-color="#333333" title="黑色"></div>
+                <div class="color-option" style="background-color: #FFFFFF;" data-color="#FFFFFF" title="白色"></div>
+                <div class="color-option" style="background-color: #AAAAAA;" data-color="#AAAAAA" title="灰色"></div>
+                <div class="color-option" style="background-color: #8B4513;" data-color="#8B4513" title="棕色"></div>
+            </div>
+            <a href="#" class="download-btn" onclick="downloadPetSVG('cat-svg', 'cat.svg')">下载SVG</a>
+        </div>
+        
+        <!-- 小狗 -->
+        <div class="pet-card">
+            <svg width="150" height="150" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" id="dog-svg">
+                <title>小狗</title>
+                <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                    <ellipse id="dog-body" fill="#D2B48C" cx="100" cy="120" rx="60" ry="40"></ellipse>
+                    <circle id="dog-head" fill="#D2B48C" cx="100" cy="70" r="40"></circle>
+                    <path id="dog-left-ear" d="M70,50 L50,20 L75,40 Z" fill="#D2B48C"></path>
+                    <path id="dog-right-ear" d="M130,50 L150,20 L125,40 Z" fill="#D2B48C"></path>
+                    <ellipse fill="#FFFFFF" cx="85" cy="65" rx="8" ry="10"></ellipse>
+                    <ellipse fill="#FFFFFF" cx="115" cy="65" rx="8" ry="10"></ellipse>
+                    <ellipse fill="#000000" cx="85" cy="65" rx="4" ry="5"></ellipse>
+                    <ellipse fill="#000000" cx="115" cy="65" rx="4" ry="5"></ellipse>
+                    <ellipse fill="#000000" cx="100" cy="85" rx="10" ry="7"></ellipse>
+                    <path d="M100,85 L100,95 M90,95 Q100,105 110,95" stroke="#000000" stroke-width="1.5" fill="none"></path>
+                    <path d="M100,95 Q100,105 95,100" fill="#FF6B6B"></path>
+                    <rect id="dog-front-left-leg" fill="#D2B48C" x="60" y="140" width="15" height="30" rx="5"></rect>
+                    <rect id="dog-front-right-leg" fill="#D2B48C" x="125" y="140" width="15" height="30" rx="5"></rect>
+                    <rect id="dog-back-left-leg" fill="#D2B48C" x="75" y="140" width="15" height="30" rx="5"></rect>
+                    <rect id="dog-back-right-leg" fill="#D2B48C" x="110" y="140" width="15" height="30" rx="5"></rect>
+                    <path id="dog-tail" d="M160,120 C180,110 190,90 170,80" stroke="#D2B48C" stroke-width="10" fill="none"></path>
+                </g>
+            </svg>
+            <div class="pet-name">小狗</div>
+            <div class="pet-description">忠诚、活泼的狗狗伙伴，喜欢玩耍和陪伴你的每一刻。</div>
+            <div class="color-options" data-pet="dog">
+                <div class="color-option" style="background-color: #FFD700;" data-color="#FFD700" title="金色"></div>
+                <div class="color-option selected" style="background-color: #D2B48C;" data-color="#D2B48C" title="棕色"></div>
+                <div class="color-option" style="background-color: #333333;" data-color="#333333" title="黑色"></div>
+                <div class="color-option" style="background-color: #FFFFFF;" data-color="#FFFFFF" title="白色"></div>
+                <div class="color-option" style="background: repeating-linear-gradient(45deg, #FFFFFF, #FFFFFF 5px, #333333 5px, #333333 10px);" data-color="pattern" title="斑点"></div>
+            </div>
+            <a href="#" class="download-btn" onclick="downloadPetSVG('dog-svg', 'dog.svg')">下载SVG</a>
+        </div>
+        
+        <!-- 兔子 -->
+        <div class="pet-card">
+            <svg width="150" height="150" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" id="rabbit-svg">
+                <title>兔子</title>
+                <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                    <ellipse id="rabbit-body" fill="#FFFFFF" cx="100" cy="130" rx="50" ry="40"></ellipse>
+                    <circle id="rabbit-head" fill="#FFFFFF" cx="100" cy="80" r="35"></circle>
+                    <path id="rabbit-left-ear" d="M80,60 L70,10 L90,50 Z" fill="#FFFFFF" stroke="#FFCCCC" stroke-width="2"></path>
+                    <path id="rabbit-right-ear" d="M120,60 L130,10 L110,50 Z" fill="#FFFFFF" stroke="#FFCCCC" stroke-width="2"></path>
+                    <ellipse fill="#FFFFFF" cx="85" cy="75" rx="8" ry="10"></ellipse>
+                    <ellipse fill="#FFFFFF" cx="115" cy="75" rx="8" ry="10"></ellipse>
+                    <ellipse fill="#FF0000" cx="85" cy="75" rx="4" ry="5"></ellipse>
+                    <ellipse fill="#FF0000" cx="115" cy="75" rx="4" ry="5"></ellipse>
+                    <path d="M100,85 L95,90 L105,90 Z" fill="#FFCCCC"></path>
+                    <path d="M95,90 Q100,95 105,90" stroke="#000000" stroke-width="1" fill="none"></path>
+                    <ellipse id="rabbit-front-left-leg" fill="#FFFFFF" cx="80" cy="160" rx="10" ry="15"></ellipse>
+                    <ellipse id="rabbit-front-right-leg" fill="#FFFFFF" cx="120" cy="160" rx="10" ry="15"></ellipse>
+                    <circle id="rabbit-tail" fill="#FFFFFF" cx="150" cy="130" r="10"></circle>
+                </g>
+            </svg>
+            <div class="pet-name">兔子</div>
+            <div class="pet-description">可爱、温顺的兔子伙伴，喜欢胡萝卜和安静的环境。</div>
+            <div class="color-options" data-pet="rabbit">
+                <div class="color-option selected" style="background-color: #FFFFFF;" data-color="#FFFFFF" title="白色"></div>
+                <div class="color-option" style="background-color: #D2B48C;" data-color="#D2B48C" title="棕色"></div>
+                <div class="color-option" style="background-color: #AAAAAA;" data-color="#AAAAAA" title="灰色"></div>
+                <div class="color-option" style="background-color: #333333;" data-color="#333333" title="黑色"></div>
+            </div>
+            <a href="#" class="download-btn" onclick="downloadPetSVG('rabbit-svg', 'rabbit.svg')">下载SVG</a>
+        </div>
+        
+        <!-- 小龙 -->
+        <div class="pet-card">
+            <svg width="150" height="150" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" id="dragon-svg">
+                <title>小龙</title>
+                <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                    <path id="dragon-body" fill="#5CB85C" d="M60,100 C60,80 80,70 100,70 C120,70 140,80 140,100 C140,120 120,140 100,140 C80,140 60,120 60,100 Z"></path>
+                    <circle id="dragon-head" fill="#5CB85C" cx="100" cy="60" r="30"></circle>
+                    <path id="dragon-left-horn" d="M85,40 L70,10 L90,35 Z" fill="#5CB85C"></path>
+                    <path id="dragon-right-horn" d="M115,40 L130,10 L110,35 Z" fill="#5CB85C"></path>
+                    <ellipse fill="#FFFFFF" cx="85" cy="55" rx="7" ry="9"></ellipse>
+                    <ellipse fill="#FFFFFF" cx="115" cy="55" rx="7" ry="9"></ellipse>
+                    <ellipse fill="#FF9900" cx="85" cy="55" rx="3" ry="4"></ellipse>
+                    <ellipse fill="#FF9900" cx="115" cy="55" rx="3" ry="4"></ellipse>
+                    <path d="M100,65 L95,75 L105,75 Z" fill="#FF6B6B"></path>
+                    <path d="M95,75 Q100,80 105,75" stroke="#000000" stroke-width="1.5" fill="none"></path>
+                    <path id="dragon-left-wing" d="M60,90 C40,70 30,80 40,100 C30,120 40,130 60,110" fill="#5CB85C" stroke="#000000" stroke-width="1"></path>
+                    <path id="dragon-right-wing" d="M140,90 C160,70 170,80 160,100 C170,120 160,130 140,110" fill="#5CB85C" stroke="#000000" stroke-width="1"></path>
+                    <path id="dragon-tail" d="M100,140 C90,160 80,170 70,180 C60,190 50,180 60,170 C70,160 80,150 100,140" fill="#5CB85C"></path>
+                    <path id="dragon-tail-tip" d="M60,170 L50,180 L65,175 Z" fill="#FF6B6B"></path>
+                    <path id="dragon-fire" d="M100,75 C105,70 110,65 115,70 C120,75 115,80 110,75 C105,70 100,75 100,75" fill="#FF9900" opacity="0.8"></path>
+                </g>
+            </svg>
+            <div class="pet-name">小龙</div>
+            <div class="pet-description">神秘、强大的龙伙伴，喜欢收集宝物和飞翔。</div>
+            <div class="color-options" data-pet="dragon">
+                <div class="color-option" style="background-color: #FF0000;" data-color="#FF0000" title="红色"></div>
+                <div class="color-option" style="background-color: #0000FF;" data-color="#0000FF" title="蓝色"></div>
+                <div class="color-option selected" style="background-color: #5CB85C;" data-color="#5CB85C" title="绿色"></div>
+                <div class="color-option" style="background-color: #FFD700;" data-color="#FFD700" title="金色"></div>
+                <div class="color-option" style="background-color: #333333;" data-color="#333333" title="黑色"></div>
+            </div>
+            <a href="#" class="download-btn" onclick="downloadPetSVG('dragon-svg', 'dragon.svg')">下载SVG</a>
+        </div>
+        
+        <!-- 外星生物 -->
+        <div class="pet-card">
+            <svg width="150" height="150" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" id="alien-svg">
+                <title>外星生物</title>
+                <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                    <path id="alien-body" fill="#9370DB" d="M70,100 C70,130 85,160 100,160 C115,160 130,130 130,100 C130,70 115,60 100,60 C85,60 70,70 70,100 Z"></path>
+                    <path id="alien-head" fill="#9370DB" d="M70,60 C70,30 85,20 100,20 C115,20 130,30 130,60 C130,90 115,100 100,100 C85,100 70,90 70,60 Z"></path>
+                    <path id="alien-left-antenna" d="M85,30 C80,20 75,10 85,5" stroke="#9370DB" stroke-width="3" fill="none"></path>
+                    <circle id="alien-left-antenna-tip" fill="#FF00FF" cx="85" cy="5" r="3"></circle>
+                    <path id="alien-right-antenna" d="M115,30 C120,20 125,10 115,5" stroke="#9370DB" stroke-width="3" fill="none"></path>
+                    <circle id="alien-right-antenna-tip" fill="#FF00FF" cx="115" cy="5" r="3"></circle>
+                    <ellipse fill="#000000" cx="85" cy="50" rx="10" ry="15"></ellipse>
+                    <ellipse fill="#000000" cx="115" cy="50" rx="10" ry="15"></ellipse>
+                    <ellipse fill="#FFFFFF" cx="88" cy="45" rx="3" ry="4"></ellipse>
+                    <ellipse fill="#FFFFFF" cx="118" cy="45" rx="3" ry="4"></ellipse>
+                    <path d="M90,75 C95,85 105,85 110,75" stroke="#000000" stroke-width="1.5" fill="none"></path>
+                    <path id="alien-left-arm" d="M70,110 C60,120 50,115 45,105" stroke="#9370DB" stroke-width="5" fill="none"></path>
+                    <circle id="alien-left-hand" fill="#9370DB" cx="45" cy="105" r="5"></circle>
+                    <path id="alien-right-arm" d="M130,110 C140,120 150,115 155,105" stroke="#9370DB" stroke-width="5" fill="none"></path>
+                    <circle id="alien-right-hand" fill="#9370DB" cx="155" cy="105" r="5"></circle>
+                    <path id="alien-left-leg" d="M90,160 L85,180" stroke="#9370DB" stroke-width="5" fill="none"></path>
+                    <circle id="alien-left-foot" fill="#9370DB" cx="85" cy="180" r="5"></circle>
+                    <path id="alien-right-leg" d="M110,160 L115,180" stroke="#9370DB" stroke-width="5" fill="none"></path>
+                    <circle id="alien-right-foot" fill="#9370DB" cx="115" cy="180" r="5"></circle>
+                    <ellipse id="alien-aura" fill="#9370DB" opacity="0.2" cx="100" cy="100" rx="70" ry="90"></ellipse>
+                </g>
+            </svg>
+            <div class="pet-name">外星生物</div>
+            <div class="pet-description">来自遥远星球的神秘伙伴，拥有特殊能力和独特习性。</div>
+            <div class="color-options" data-pet="alien">
+                <div class="color-option" style="background-color: #00FF00;" data-color="#00FF00" title="绿色"></div>
+                <div class="color-option" style="background-color: #0000FF;" data-color="#0000FF" title="蓝色"></div>
+                <div class="color-option selected" style="background-color: #9370DB;" data-color="#9370DB" title="紫色"></div>
+                <div class="color-option" style="background-color: #C0C0C0;" data-color="#C0C0C0" title="银色"></div>
+                <div class="color-option" style="background-color: #FFD700;" data-color="#FFD700" title="金色"></div>
+            </div>
+            <a href="#" class="download-btn" onclick="downloadPetSVG('alien-svg', 'alien.svg')">下载SVG</a>
+        </div>
+    </div>
+    
+    <button class="download-all" onclick="downloadAllPetSVGs()">下载所有宠物SVG</button>
+    
+    <h2>表情SVG文件</h2>
+    <p style="text-align: center;">
+        您可以在 <a href="export-mood-svgs.html" style="color: #6a1b9a; font-weight: bold;">表情SVG导出页面</a> 下载所有表情SVG文件
+    </p>
+    
+    <script>
+        // 颜色选择功能
+        document.querySelectorAll('.color-option').forEach(option => {
+            option.addEventListener('click', function() {
+                // 移除同组中其他选项的选中状态
+                const parent = this.parentElement;
+                parent.querySelectorAll('.color-option').forEach(opt => {
+                    opt.classList.remove('selected');
+                });
+                
+                // 添加当前选项的选中状态
+                this.classList.add('selected');
+                
+                // 更新SVG颜色
+                const petType = parent.dataset.pet;
+                const color = this.dataset.color;
+                
+                if (color === 'pattern') {
+                    // 特殊处理斑点狗
+                    addSpotPattern(petType);
+                } else {
+                    updatePetColor(petType, color);
+                }
+            });
+        });
+        
+        // 更新宠物颜色
+        function updatePetColor(petType, color) {
+            const elements = document.querySelectorAll(`[id^="${petType}-"]`);
+            elements.forEach(el => {
+                if (el.hasAttribute('fill') && el.getAttribute('fill') !== '#FFFFFF' && 
+                    el.getAttribute('fill') !== '#000000' && el.getAttribute('fill') !== '#FF6B6B' && 
+                    el.getAttribute('fill') !== '#FF9900' && el.getAttribute('fill') !== '#FF00FF' && 
+                    el.getAttribute('fill') !== '#FFCCCC') {
+                    el.setAttribute('fill', color);
+                }
+                if (el.hasAttribute('stroke') && el.getAttribute('stroke') !== '#000000' && 
+                    el.getAttribute('stroke') !== '#FFCCCC') {
+                    el.setAttribute('stroke', color);
+                }
+            });
+            
+            // 移除可能存在的斑点模式
+            if (petType === 'dog') {
+                removeSpotPattern();
+            }
+        }
+        
+        // 添加斑点模式
+        function addSpotPattern(petType) {
+            if (petType !== 'dog') return;
+            
+            const svg = document.getElementById('dog-svg');
+            let defs = svg.querySelector('defs');
+            
+            if (!defs) {
+                defs = document.createElementNS('http://www.w3.org/2000/svg', 'defs');
+                svg.insertBefore(defs, svg.firstChild);
+            }
+            
+            // 检查是否已存在斑点模式
+            if (!svg.querySelector('#spotPattern')) {
+                const pattern = document.createElementNS('http://www.w3.org/2000/svg', 'pattern');
+                pattern.setAttribute('id', 'spotPattern');
+                pattern.setAttribute('patternUnits', 'userSpaceOnUse');
+                pattern.setAttribute('width', '30');
+                pattern.setAttribute('height', '30');
+                
+                const circle = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
+                circle.setAttribute('cx', '15');
+                circle.setAttribute('cy', '15');
+                circle.setAttribute('r', '5');
+                circle.setAttribute('fill', '#333333');
+                
+                pattern.appendChild(circle);
+                defs.appendChild(pattern);
+            }
+            
+            // 应用斑点模式
+            const elements = document.querySelectorAll('[id^="dog-"]');
+            elements.forEach(el => {
+                if (el.hasAttribute('fill') && el.getAttribute('fill') !== '#FFFFFF' && 
+                    el.getAttribute('fill') !== '#000000' && el.getAttribute('fill') !== '#FF6B6B') {
+                    el.setAttribute('fill', 'url(#spotPattern)');
+                }
+            });
+        }
+        
+        // 移除斑点模式
+        function removeSpotPattern() {
+            const svg = document.getElementById('dog-svg');
+            const pattern = svg.querySelector('#spotPattern');
+            if (pattern) {
+                pattern.parentNode.removeChild(pattern);
+            }
+        }
+        
+        // 下载单个宠物SVG
+        function downloadPetSVG(svgId, filename) {
+            const svg = document.getElementById(svgId);
+            const serializer = new XMLSerializer();
+            let source = serializer.serializeToString(svg);
+            
+            // 添加XML声明
+            source = '<?xml version="1.0" encoding="UTF-8"?>\n' + source;
+            
+            // 创建Blob
+            const blob = new Blob([source], { type: 'image/svg+xml' });
+            const url = URL.createObjectURL(blob);
+            
+            // 创建下载链接
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = filename;
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            
+            // 释放URL
+            setTimeout(() => URL.revokeObjectURL(url), 100);
+        }
+        
+        // 下载所有宠物SVG
+        function downloadAllPetSVGs() {
+            const svgIds = ['cat-svg', 'dog-svg', 'rabbit-svg', 'dragon-svg', 'alien-svg'];
+            const filenames = ['cat.svg', 'dog.svg', 'rabbit.svg', 'dragon.svg', 'alien.svg'];
+            
+            for (let i = 0; i < svgIds.length; i++) {
+                setTimeout(() => {
+                    downloadPetSVG(svgIds[i], filenames[i]);
+                }, i * 300); // 每300毫秒下载一个，避免浏览器阻止多个下载
+            }
+        }
+    </script>
+</body>
+</html> 

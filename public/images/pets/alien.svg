@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="200px" height="200px" viewBox="0 0 200 200" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>外星生物</title>
+    <g id="alien" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <!-- 外星生物身体 - 可以通过fill属性更改颜色 -->
+        <path id="body" fill="#9370DB" d="M70,100 C70,130 85,160 100,160 C115,160 130,130 130,100 C130,70 115,60 100,60 C85,60 70,70 70,100 Z"></path>
+        
+        <!-- 外星生物头部 -->
+        <path id="head" fill="#9370DB" d="M70,60 C70,30 85,20 100,20 C115,20 130,30 130,60 C130,90 115,100 100,100 C85,100 70,90 70,60 Z"></path>
+        
+        <!-- 外星生物触角 -->
+        <path d="M85,30 C80,20 75,10 85,5" id="left-antenna" stroke="#9370DB" stroke-width="3" fill="none"></path>
+        <circle id="left-antenna-tip" fill="#FF00FF" cx="85" cy="5" r="3"></circle>
+        
+        <path d="M115,30 C120,20 125,10 115,5" id="right-antenna" stroke="#9370DB" stroke-width="3" fill="none"></path>
+        <circle id="right-antenna-tip" fill="#FF00FF" cx="115" cy="5" r="3"></circle>
+        
+        <!-- 外星生物眼睛 -->
+        <ellipse id="left-eye" fill="#000000" cx="85" cy="50" rx="10" ry="15"></ellipse>
+        <ellipse id="right-eye" fill="#000000" cx="115" cy="50" rx="10" ry="15"></ellipse>
+        <ellipse id="left-eye-shine" fill="#FFFFFF" cx="88" cy="45" rx="3" ry="4"></ellipse>
+        <ellipse id="right-eye-shine" fill="#FFFFFF" cx="118" cy="45" rx="3" ry="4"></ellipse>
+        
+        <!-- 外星生物嘴巴 -->
+        <path d="M90,75 C95,85 105,85 110,75" id="mouth" stroke="#000000" stroke-width="1.5" fill="none"></path>
+        
+        <!-- 外星生物手臂 -->
+        <path d="M70,110 C60,120 50,115 45,105" id="left-arm" stroke="#9370DB" stroke-width="5" fill="none"></path>
+        <circle id="left-hand" fill="#9370DB" cx="45" cy="105" r="5"></circle>
+        
+        <path d="M130,110 C140,120 150,115 155,105" id="right-arm" stroke="#9370DB" stroke-width="5" fill="none"></path>
+        <circle id="right-hand" fill="#9370DB" cx="155" cy="105" r="5"></circle>
+        
+        <!-- 外星生物腿 -->
+        <path d="M90,160 L85,180" id="left-leg" stroke="#9370DB" stroke-width="5" fill="none"></path>
+        <circle id="left-foot" fill="#9370DB" cx="85" cy="180" r="5"></circle>
+        
+        <path d="M110,160 L115,180" id="right-leg" stroke="#9370DB" stroke-width="5" fill="none"></path>
+        <circle id="right-foot" fill="#9370DB" cx="115" cy="180" r="5"></circle>
+        
+        <!-- 外星生物光环 -->
+        <ellipse id="aura" fill="#9370DB" opacity="0.2" cx="100" cy="100" rx="70" ry="90"></ellipse>
+    </g>
+</svg> 

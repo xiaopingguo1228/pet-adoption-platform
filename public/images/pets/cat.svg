@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="200px" height="200px" viewBox="0 0 200 200" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>猫咪</title>
+    <g id="cat" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <!-- 猫咪身体 - 可以通过fill属性更改颜色 -->
+        <circle id="body" fill="#FFA500" cx="100" cy="110" r="60"></circle>
+        
+        <!-- 猫咪头部 -->
+        <circle id="head" fill="#FFA500" cx="100" cy="80" r="40"></circle>
+        
+        <!-- 猫咪耳朵 -->
+        <path d="M70,60 L60,30 L85,50 Z" id="left-ear" fill="#FFA500"></path>
+        <path d="M130,60 L140,30 L115,50 Z" id="right-ear" fill="#FFA500"></path>
+        
+        <!-- 猫咪眼睛 -->
+        <ellipse id="left-eye" fill="#FFFFFF" cx="85" cy="75" rx="10" ry="12"></ellipse>
+        <ellipse id="right-eye" fill="#FFFFFF" cx="115" cy="75" rx="10" ry="12"></ellipse>
+        <ellipse id="left-pupil" fill="#000000" cx="85" cy="75" rx="5" ry="7"></ellipse>
+        <ellipse id="right-pupil" fill="#000000" cx="115" cy="75" rx="5" ry="7"></ellipse>
+        
+        <!-- 猫咪鼻子 -->
+        <path d="M100,85 L95,95 L105,95 Z" id="nose" fill="#FF6B6B"></path>
+        
+        <!-- 猫咪嘴巴 -->
+        <path d="M95,95 Q100,100 105,95" id="mouth" stroke="#000000" stroke-width="1.5" fill="none"></path>
+        
+        <!-- 猫咪胡须 -->
+        <line x1="95" y1="95" x2="70" y2="90" id="whisker1" stroke="#000000" stroke-width="1"></line>
+        <line x1="95" y1="95" x2="70" y2="95" id="whisker2" stroke="#000000" stroke-width="1"></line>
+        <line x1="95" y1="95" x2="70" y2="100" id="whisker3" stroke="#000000" stroke-width="1"></line>
+        <line x1="105" y1="95" x2="130" y2="90" id="whisker4" stroke="#000000" stroke-width="1"></line>
+        <line x1="105" y1="95" x2="130" y2="95" id="whisker5" stroke="#000000" stroke-width="1"></line>
+        <line x1="105" y1="95" x2="130" y2="100" id="whisker6" stroke="#000000" stroke-width="1"></line>
+        
+        <!-- 猫咪尾巴 -->
+        <path d="M160,110 C180,90 170,70 150,80 C140,85 130,100 140,110" id="tail" stroke="#FFA500" stroke-width="10" fill="none"></path>
+    </g>
+</svg> 

@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>跨次元电子宠物伙伴 - SVG版本</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            background: linear-gradient(to bottom, #e0f7fa, #e8eaf6);
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .container {
+            max-width: 800px;
+            width: 100%;
+            padding: 20px;
+        }
+        
+        h1 {
+            color: #6a1b9a;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .pet-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+        
+        .pet-card {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .pet-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+        }
+        
+        .pet-image {
+            width: 150px;
+            height: 150px;
+            margin-bottom: 15px;
+        }
+        
+        .pet-name {
+            font-weight: bold;
+            color: #6a1b9a;
+            margin-bottom: 5px;
+            font-size: 18px;
+        }
+        
+        .pet-description {
+            color: #666;
+            font-size: 14px;
+            text-align: center;
+        }
+        
+        .mood-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+            gap: 15px;
+            margin-top: 30px;
+        }
+        
+        .mood-card {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            padding: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .mood-image {
+            width: 40px;
+            height: 40px;
+            margin-bottom: 8px;
+        }
+        
+        .mood-name {
+            font-size: 14px;
+            color: #6a1b9a;
+        }
+        
+        footer {
+            margin-top: 40px;
+            color: #666;
+            text-align: center;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>跨次元电子宠物伙伴 - SVG版本</h1>
+        
+        <div class="pet-gallery">
+            <div class="pet-card">
+                <img src="/images/pets/cat.svg" alt="猫咪" class="pet-image">
+                <div class="pet-name">猫咪</div>
+                <div class="pet-description">优雅、独立的猫咪伙伴，喜欢安静的环境和偶尔的抚摸。</div>
+            </div>
+            
+            <div class="pet-card">
+                <img src="/images/pets/dog.svg" alt="小狗" class="pet-image">
+                <div class="pet-name">小狗</div>
+                <div class="pet-description">忠诚、活泼的狗狗伙伴，喜欢玩耍和陪伴你的每一刻。</div>
+            </div>
+            
+            <div class="pet-card">
+                <img src="/images/pets/rabbit.svg" alt="兔子" class="pet-image">
+                <div class="pet-name">兔子</div>
+                <div class="pet-description">可爱、温顺的兔子伙伴，喜欢胡萝卜和安静的环境。</div>
+            </div>
+            
+            <div class="pet-card">
+                <img src="/images/pets/dragon.svg" alt="小龙" class="pet-image">
+                <div class="pet-name">小龙</div>
+                <div class="pet-description">神秘、强大的龙伙伴，喜欢收集宝物和飞翔。</div>
+            </div>
+            
+            <div class="pet-card">
+                <img src="/images/pets/alien.svg" alt="外星生物" class="pet-image">
+                <div class="pet-name">外星生物</div>
+                <div class="pet-description">来自遥远星球的神秘伙伴，拥有特殊能力和独特习性。</div>
+            </div>
+        </div>
+        
+        <h2 style="color: #6a1b9a; text-align: center; margin-top: 40px;">宠物表情</h2>
+        
+        <div class="mood-gallery">
+            <div class="mood-card">
+                <svg width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg" class="mood-image">
+                    <circle cx="20" cy="20" r="18" fill="#FFDD00" />
+                    <circle cx="12" cy="15" r="3" fill="#000000" />
+                    <circle cx="28" cy="15" r="3" fill="#000000" />
+                    <path d="M10,25 Q20,35 30,25" stroke="#000000" stroke-width="2" fill="none" />
+                </svg>
+                <div class="mood-name">开心</div>
+            </div>
+            
+            <div class="mood-card">
+                <svg width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg" class="mood-image">
+                    <circle cx="20" cy="20" r="18" fill="#FFDD00" />
+                    <circle cx="12" cy="15" r="3" fill="#000000" />
+                    <circle cx="28" cy="15" r="3" fill="#000000" />
+                    <line x1="10" y1="28" x2="30" y2="28" stroke="#000000" stroke-width="2" />
+                </svg>
+                <div class="mood-name">平静</div>
+            </div>
+            
+            <div class="mood-card">
+                <svg width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg" class="mood-image">
+                    <circle cx="20" cy="20" r="18" fill="#FFDD00" />
+                    <circle cx="12" cy="15" r="3" fill="#000000" />
+                    <circle cx="28" cy="15" r="3" fill="#000000" />
+                    <path d="M10,30 Q20,20 30,30" stroke="#000000" stroke-width="2" fill="none" />
+                </svg>
+                <div class="mood-name">难过</div>
+            </div>
+            
+            <div class="mood-card">
+                <svg width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg" class="mood-image">
+                    <circle cx="20" cy="20" r="18" fill="#FFDD00" />
+                    <circle cx="12" cy="15" r="3" fill="#000000" />
+                    <circle cx="28" cy="15" r="3" fill="#000000" />
+                    <ellipse cx="20" cy="28" rx="5" ry="3" fill="#000000" />
+                    <path d="M15,28 L25,28" stroke="#000000" stroke-width="1" fill="none" />
+                </svg>
+                <div class="mood-name">饥饿</div>
+            </div>
+            
+            <div class="mood-card">
+                <svg width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg" class="mood-image">
+                    <circle cx="20" cy="20" r="18" fill="#FFDD00" />
+                    <path d="M10,15 L14,15" stroke="#000000" stroke-width="2" />
+                    <path d="M26,15 L30,15" stroke="#000000" stroke-width="2" />
+                    <path d="M15,28 L25,28" stroke="#000000" stroke-width="2" />
+                </svg>
+                <div class="mood-name">疲倦</div>
+            </div>
+            
+            <div class="mood-card">
+                <svg width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg" class="mood-image">
+                    <circle cx="20" cy="20" r="18" fill="#FFDD00" />
+                    <circle cx="12" cy="15" r="3" fill="#000000" />
+                    <circle cx="28" cy="15" r="3" fill="#000000" />
+                    <path d="M15,28 L25,28" stroke="#000000" stroke-width="2" />
+                    <path d="M20,10 L20,5" stroke="#00FF00" stroke-width="2" />
+                    <circle cx="20" cy="5" r="2" fill="#00FF00" />
+                </svg>
+                <div class="mood-name">生病</div>
+            </div>
+        </div>
+        
+        <footer>
+            <p>© 2023 跨次元电子宠物伙伴 - 虚拟宠物养成应用</p>
+            <p>所有SVG图像均为原创设计</p>
+        </footer>
+    </div>
+</body>
+</html> 

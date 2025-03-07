@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="200px" height="200px" viewBox="0 0 200 200" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>兔子</title>
+    <g id="rabbit" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <!-- 兔子身体 - 可以通过fill属性更改颜色 -->
+        <ellipse id="body" fill="#FFFFFF" cx="100" cy="130" rx="50" ry="40"></ellipse>
+        
+        <!-- 兔子头部 -->
+        <circle id="head" fill="#FFFFFF" cx="100" cy="80" r="35"></circle>
+        
+        <!-- 兔子耳朵 -->
+        <path d="M80,60 L70,10 L90,50 Z" id="left-ear" fill="#FFFFFF" stroke="#FFCCCC" stroke-width="2"></path>
+        <path d="M120,60 L130,10 L110,50 Z" id="right-ear" fill="#FFFFFF" stroke="#FFCCCC" stroke-width="2"></path>
+        
+        <!-- 兔子眼睛 -->
+        <ellipse id="left-eye" fill="#FFFFFF" cx="85" cy="75" rx="8" ry="10"></ellipse>
+        <ellipse id="right-eye" fill="#FFFFFF" cx="115" cy="75" rx="8" ry="10"></ellipse>
+        <ellipse id="left-pupil" fill="#FF0000" cx="85" cy="75" rx="4" ry="5"></ellipse>
+        <ellipse id="right-pupil" fill="#FF0000" cx="115" cy="75" rx="4" ry="5"></ellipse>
+        
+        <!-- 兔子鼻子 -->
+        <path d="M100,85 L95,90 L105,90 Z" id="nose" fill="#FFCCCC"></path>
+        
+        <!-- 兔子嘴巴 -->
+        <path d="M95,90 Q100,95 105,90" id="mouth" stroke="#000000" stroke-width="1" fill="none"></path>
+        
+        <!-- 兔子胡须 -->
+        <line x1="95" y1="90" x2="75" y2="85" id="whisker1" stroke="#000000" stroke-width="0.5"></line>
+        <line x1="95" y1="90" x2="75" y2="90" id="whisker2" stroke="#000000" stroke-width="0.5"></line>
+        <line x1="95" y1="90" x2="75" y2="95" id="whisker3" stroke="#000000" stroke-width="0.5"></line>
+        <line x1="105" y1="90" x2="125" y2="85" id="whisker4" stroke="#000000" stroke-width="0.5"></line>
+        <line x1="105" y1="90" x2="125" y2="90" id="whisker5" stroke="#000000" stroke-width="0.5"></line>
+        <line x1="105" y1="90" x2="125" y2="95" id="whisker6" stroke="#000000" stroke-width="0.5"></line>
+        
+        <!-- 兔子前腿 -->
+        <ellipse id="front-left-leg" fill="#FFFFFF" cx="80" cy="160" rx="10" ry="15"></ellipse>
+        <ellipse id="front-right-leg" fill="#FFFFFF" cx="120" cy="160" rx="10" ry="15"></ellipse>
+        
+        <!-- 兔子尾巴 -->
+        <circle id="tail" fill="#FFFFFF" cx="150" cy="130" r="10"></circle>
+    </g>
+</svg> 

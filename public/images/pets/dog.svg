@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="200px" height="200px" viewBox="0 0 200 200" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>小狗</title>
+    <g id="dog" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <!-- 小狗身体 - 可以通过fill属性更改颜色 -->
+        <ellipse id="body" fill="#D2B48C" cx="100" cy="120" rx="60" ry="40"></ellipse>
+        
+        <!-- 小狗头部 -->
+        <circle id="head" fill="#D2B48C" cx="100" cy="70" r="40"></circle>
+        
+        <!-- 小狗耳朵 -->
+        <path d="M70,50 L50,20 L75,40 Z" id="left-ear" fill="#D2B48C"></path>
+        <path d="M130,50 L150,20 L125,40 Z" id="right-ear" fill="#D2B48C"></path>
+        
+        <!-- 小狗眼睛 -->
+        <ellipse id="left-eye" fill="#FFFFFF" cx="85" cy="65" rx="8" ry="10"></ellipse>
+        <ellipse id="right-eye" fill="#FFFFFF" cx="115" cy="65" rx="8" ry="10"></ellipse>
+        <ellipse id="left-pupil" fill="#000000" cx="85" cy="65" rx="4" ry="5"></ellipse>
+        <ellipse id="right-pupil" fill="#000000" cx="115" cy="65" rx="4" ry="5"></ellipse>
+        
+        <!-- 小狗鼻子 -->
+        <ellipse id="nose" fill="#000000" cx="100" cy="85" rx="10" ry="7"></ellipse>
+        
+        <!-- 小狗嘴巴 -->
+        <path d="M100,85 L100,95 M90,95 Q100,105 110,95" id="mouth" stroke="#000000" stroke-width="1.5" fill="none"></path>
+        
+        <!-- 小狗舌头 -->
+        <path d="M100,95 Q100,105 95,100" id="tongue" fill="#FF6B6B"></path>
+        
+        <!-- 小狗腿 -->
+        <rect id="front-left-leg" fill="#D2B48C" x="60" y="140" width="15" height="30" rx="5"></rect>
+        <rect id="front-right-leg" fill="#D2B48C" x="125" y="140" width="15" height="30" rx="5"></rect>
+        <rect id="back-left-leg" fill="#D2B48C" x="75" y="140" width="15" height="30" rx="5"></rect>
+        <rect id="back-right-leg" fill="#D2B48C" x="110" y="140" width="15" height="30" rx="5"></rect>
+        
+        <!-- 小狗尾巴 -->
+        <path d="M160,120 C180,110 190,90 170,80" id="tail" stroke="#D2B48C" stroke-width="10" fill="none"></path>
+    </g>
+</svg> 
