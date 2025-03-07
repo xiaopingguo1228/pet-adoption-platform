@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
-import { FiClock, FiCheckCircle, FiXCircle, FiAlertCircle, FiChevronRight, FiCalendar, FiMessageCircle } from 'react-icons/fi'
+import { FiClock, FiCheckCircle, FiXCircle, FiAlertCircle, FiChevronRight, FiCalendar, FiMessageCircle, FiInfo } from 'react-icons/fi'
 
 // 模拟数据
 const applications = [
